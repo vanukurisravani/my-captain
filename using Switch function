@@ -1,0 +1,14 @@
+#include<studio.h>
+int main()
+{
+   int i=1;
+   switch(i)
+   {
+      case 0:
+         printf(" case 0")
+      case 1:
+         printf(" case 1")
+      default:
+         printf(" other than 0 and 1")
+    }
+}
