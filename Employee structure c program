@@ -1,0 +1,49 @@
+struct employee
+{
+  int age,phone.no,salary;
+  char name;
+}e[20],temp;
+void main()
+{
+ int i,j,n;
+ printf("enter no of employees records");
+ scanf("%d",&n);
+for(i=1;i<=n:i++)
+{
+ printf("enter employee-%d name= ",i);
+ scanf("%d",&e[i].name);
+ printf("enter employee-%d age= ",i);
+ scanf("%d",&e[i].age);
+ printf("enter employee-%d phone.no= ",i);
+ scanf("%d",&e[i].phone.no);
+ printf("enter employee-%d salary= ",i);
+ scanf("%d",&e[i].salary);
+}
+printf("before sorting:\n");
+printf("sname\t sage\t sphone.no\t ssalary\n");
+printf("--------------\n");
+for(i=1;i<=n;i++)
+{
+  printf("%s\t%d\t%d\t%d\n",s[i].name,s[i].age,s[i].phone.no,s[i].salary);
+}
+for(i=1;i<=n;i++)
+{
+  for(j=1;j<=n;j++)
+   {
+     if(s[j].salary>s[j+1].salary)
+     {
+        temp=s[j];
+        s[j]=s[j+1];
+        s[j+1]=temp;
+      }
+    }
+}
+ printf("after sorting\n");
+ printf("sname\t sage\t sphone.no\t ssalary\n");
+ printf("---------------------\n");
+ for(i=1;i<=n;i++)
+{
+  printf("%s\t%d\t%d\t%d\n",s[i].name,s[i].age,s[i].phone.no,s[i].salary);
+}
+}
+
