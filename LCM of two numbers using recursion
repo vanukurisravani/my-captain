@@ -1,0 +1,49 @@
+Sanfoundry
+Menu
+
+C Program to Find LCM of a Number using Recursion
+« PrevNext »
+This is a C Program to find lcm of a number using recursion.
+
+Problem Description
+This C Program Finds LCM of a Number using Recursion.
+
+Problem Solution
+The following C program, using recursion, finds the LCM. An LCM is the lowest common multiple of any 2 numbers.
+
+advertisement
+
+Program/Source Code
+Here is the source code of the C program to find LCM of a Number using Recursion. The C program is successfully compiled and run on a Linux system. The program output is also shown below.
+
+/*
+ * C Program to Find LCM of a Number using Recursion
+ */
+#include <stdio.h>
+ 
+int lcm(int, int);
+ 
+int main()
+{
+    int a, b, result;
+    int prime[100];
+ 
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+    result = lcm(a, b);
+    printf("The LCM of %d and %d is %d\n", a, b, result);
+    return 0;
+}
+ 
+int lcm(int a, int b)
+{ 
+    static int common = 1;
+ 
+    if (common % a == 0 && common % b == 0)
+    {
+        return common;
+    }
+    common++;
+    lcm(a, b);
+    return common;
+}
